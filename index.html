@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="login-container" id="loginPage">
+    <h1>Student Portal</h1>
+    <p>Login to your account</p>
+
+    <input type="text" id="username" placeholder="Student ID">
+    <input type="password" id="password" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+    <p id="error"></p>
+
+    <small>Demo: student / 12345</small>
+</div>
+
+<div class="dashboard" id="dashboard">
+    <header>
+        <h2>Student Portal</h2>
+        <button onclick="logout()">Logout</button>
+    </header>
+
+    <aside>
+        <h3>MENU</h3>
+        <button onclick="showPage('home')">Dashboard</button>
+        <button onclick="showPage('profile')">My Profile</button>
+        <button onclick="showPage('subjects')">Subjects</button>
+        <button onclick="showPage('grades')">Grades</button>
+    </aside>
+
+    <main>
+        <section id="home" class="page">
+            <h1>Welcome, Student!</h1>
+            <div class="cards">
+                <div class="card">
+                    <h3>Student ID</h3>
+                    <p>2026-001</p>
+                </div>
+                <div class="card">
+                    <h3>Year Level</h3>
+                    <p>1st Year</p>
+                </div>
+                <div class="card">
+                    <h3>Course</h3>
+                    <p>BSIT</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="profile" class="page hidden">
+            <h1>My Profile</h1>
+            <div class="card">
+                <p>Name: Juan Dela Cruz</p>
+                <p>Age: 18</p>
+                <p>Email: juan@email.com</p>
+                <p>Course: BS Information Technology</p>
+            </div>
+        </section>
+
+        <section id="subjects" class="page hidden">
+            <h1>My Subjects</h1>
+            <div class="card">
+                <ul>
+                    <li>Introduction to Programming</li>
+                    <li>Computer Fundamentals</li>
+                    <li>Mathematics</li>
+                    <li>English Communication</li>
+                    <li>Physical Education</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="grades" class="page hidden">
+            <h1>My Grades</h1>
+            <div class="card">
+                <table>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Grade</th>
+                    </tr>
+                    <tr>
+                        <td>Programming</td>
+                        <td>95</td>
+                    </tr>
+                    <tr>
+                        <td>Mathematics</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>English</td>
+                        <td>92</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
